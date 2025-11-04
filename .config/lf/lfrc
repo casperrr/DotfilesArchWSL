@@ -1,0 +1,43 @@
+set previewer ctpv
+set cleaner ctpvclear
+&ctpv -s $id
+&ctpvquit $id
+
+# Basic Settings
+set hidden true
+set ignorecase true
+set icons true
+
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd setwallpaper ${{
+  nohup ~/dotfiles/theme1/scripts/theme-swww2.sh -f $f
+}}
+
+# Archive Bindings
+cmd unarchive ${{
+  case "$f" in
+    *.zip) unzip "$f" ;;
+    *.rar) unzip x "$f" ;;
+    *.tar.gz) tar -xzvf "$f" ;;
+    *.tar.bz2) tar -xjvf "$f" ;;
+    *.tar) tar -xvf "$f" ;;
+    *.7z) 7z e "$f";;
+    *) echo "Unsupported format" ;;
+}}
+
+# Bindings
+map m
+map au unarchive
+map md mkdir
+map bg setwallpaper
+
+# Movement
+map gc cd ~/dotfiles/theme1/
+map gd cd ~/Downloads
+map gu cd ~/university
+map gw cd ~/dotfiles/wallpapers/wallDir
