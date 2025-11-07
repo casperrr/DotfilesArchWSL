@@ -1,0 +1,13 @@
+arch4edu-keyring
+arm-linux-gnueabi-gcc75-linaro-bin
+bass-fish
+ctpv-git
+fakeroot-tcp
+ghcup-hs-bin
+googletest-git
+neofetch
+pacgraph
+python38
+rmlint
+yay
+yay-debug
