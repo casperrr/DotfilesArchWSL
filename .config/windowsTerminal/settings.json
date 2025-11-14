@@ -1,1 +1,181 @@
-/mnt/c/Users/casper/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
+        },
+        {
+            "command": "find",
+            "id": "User.find"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "keybindings": 
+    [
+        {
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "User.paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        }
+    ],
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "experimental.retroTerminalEffect": false,
+            "opacity": 70,
+            "useAcrylic": true
+        },
+        "list": 
+        [
+            {
+                "colorScheme": "Campbell",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "font": 
+                {
+                    "face": "FiraCode Nerd Font",
+                    "size": 10
+                },
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{01a2cf9b-f44f-5309-beba-5e84bfb396aa}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2019",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{b7078289-e790-5946-b3d8-7714af0733a9}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2019",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            },
+            {
+                "colorScheme": "Gruvbox Dark",
+                "elevate": false,
+                "font": 
+                {
+                    "face": "FiraCode Nerd Font",
+                    "size": 10
+                },
+                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+                "hidden": false,
+                "icon": "D:\\programing\\WSL\\archlinux_icon.ico",
+                "name": "Arch",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": true,
+                "name": "Ubuntu-20.04",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{4dd1e689-b517-5f39-947d-78e8a8bdf958}",
+                "hidden": false,
+                "name": "Ubuntu 20.04.6 LTS",
+                "source": "CanonicalGroupLimited.Ubuntu20.04LTS_79rhkp1fndgsc"
+            },
+            {
+                "colorScheme": "Gruvbox Dark",
+                "font": 
+                {
+                    "face": "FiraCode Nerd Font",
+                    "size": 10
+                },
+                "guid": "{653eff83-52f3-5527-b2ea-8d91f508dd46}",
+                "hidden": false,
+                "name": "NixOS",
+                "source": "Microsoft.WSL"
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "background": "#282828",
+            "black": "#282828",
+            "blue": "#458588",
+            "brightBlack": "#928374",
+            "brightBlue": "#83A598",
+            "brightCyan": "#8EC07C",
+            "brightGreen": "#B8BB26",
+            "brightPurple": "#D3869B",
+            "brightRed": "#FB4934",
+            "brightWhite": "#EBDBB2",
+            "brightYellow": "#FABD2F",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#689D6A",
+            "foreground": "#EBDBB2",
+            "green": "#98971A",
+            "name": "Gruvbox Dark",
+            "purple": "#B16286",
+            "red": "#CC241D",
+            "selectionBackground": "#FFFFFF",
+            "white": "#A89984",
+            "yellow": "#D79921"
+        }
+    ],
+    "theme": "dark",
+    "themes": [],
+    "useAcrylicInTabRow": false
+}
