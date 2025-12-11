@@ -10,3 +10,6 @@ starship init fish | source
 set PATH $PATH /home/casper/.local/bin
 set _OLD_VIRTUAL_PATH "$PATH"
 set -x DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+
+# Init zoxide
+zoxide init fish | source
