@@ -7,7 +7,9 @@ cowfortune
 cowsay
 docker
 expac
+fd
 fish
+fzf
 gcc
 gdb
 gedit
@@ -21,6 +23,7 @@ gource
 imagemagick
 jdk-openjdk
 jdk21-openjdk
+jq
 less
 lf
 lib32-glibc
@@ -43,14 +46,18 @@ python-pip
 python-pipx
 qemu-system-arm
 qemu-user
+ripgrep
 sshpass
 starship
 sudo
 tk
+tmux
 tree
 ttf-firacode-nerd
 unzip
 valgrind
 vim
 wget
+yazi
 zip
+zoxide

@@ -3,6 +3,7 @@ arm-linux-gnueabi-gcc75-linaro-bin
 bass-fish
 ctpv-git
 fakeroot-tcp
+flavours
 ghcup-hs-bin
 googletest-git
 neofetch
