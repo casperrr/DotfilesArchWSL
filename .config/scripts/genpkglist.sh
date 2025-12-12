@@ -1,0 +1,71 @@
+#!/bin/bash
+
+confdir="$HOME/.config"
+plfile="$confdir/pkglist.txt"
+fplfile="$confdir/foreignpkglist.txt"
+
+plcmd="pacman -Qeqn"
+fplcmd="pacman -Qeqm"
+
+# Colors
+RED=$(echo -e '\033[31m')
+GREEN=$(echo -e '\033[32m')
+PURP=$(echo -e '\033[35m')
+RESET=$(echo -e '\033[0m')
+
+pkg_report() {
+  title="$1"
+  file="$2"
+  cmd="$3"
+
+  # new_pkgs="$($cmd | diff "$file" - | grep '^>' | sed 's/^> //')"
+  new_pkgs="$($cmd | diff "$file" - | grep '^[<>]')"
+
+  ncount="$(printf "%s" "$new_pkgs" | grep -c '^>')"
+  rcount="$(printf "%s" "$new_pkgs" | grep -c '^<')"
+  tcount="$($cmd | wc -l)"
+
+  printf "New packages %s ${GREEN}%d${RED} %d${RESET}:\n" "$title" "$ncount" "$rcount"
+
+  if [ "$ncount" -eq 0 ]; then
+    echo -e "  (${RED}none${RESET})"
+  else
+    printf "%s\n" "$new_pkgs" \
+      | sed "s/^>/${GREEN}->/" \
+      | sed "s/^</${RED}<-/"
+  fi
+
+  # printf "Total: (${PURP}%d${RESET})\n" "$tcount"
+  # printf "New:   (${PURP}%d${RESET})\n" "$ncount"
+
+  # printf "${PURP}%d${RESET}/${PURP}%d${RESET} new pkgs.\n\n" "$ncount" "$tcount"
+
+  printf "${RESET}"
+  printf "${PURP}%d${RESET} - total\n" "$tcount"
+  printf "${GREEN}%d${RESET} - new\n" "$ncount"
+  printf "${RED}%d${RESET} - removed\n\n" "$rcount"
+  
+  # printf "${GREEN}New${RESET}: ${RED}Removed${RESET}: ${PURP}Total${RESET}:\n"
+  # printf "${GREEN}%d    ${RED}%d        ${PURP}%d${RESET}\n\n" "$ncount" "$rcount" "$tcount"
+
+  # echo
+}
+
+pkg_report "(Official)" "$plfile" "$plcmd"
+pkg_report "(Foreign/AUR)" "$fplfile" "$fplcmd"
+
+printf "Do you want to write to?:\n${PURP}${plfile}\n${fplfile}${RESET}\n"
+while true; do
+  read -p "[Y/n]: " yn
+  if [[ -z "$yn" ]]; then
+    yn="y"
+  fi
+  case "$yn" in
+    [Yy]) $plcmd > "$plfile"; \
+      $fplcmd > "$fplfile"; \
+      printf "${GREEN}Success!${RESET}\n"
+      break;;
+    [Nn]) break;;
+    *)    echo "Please enter y or n (or press Enter for yes).";;
+  esac
+done
