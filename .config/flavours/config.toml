@@ -53,3 +53,31 @@
 # subtemplate = "css-variables"
 # start= "/* Start flavours */"
 # end = "/* End flavours */"
+
+shell = "sh -c {}"
+
+[[items]]
+file = "/mnt/c/Users/casper/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
+template = "winterm"
+subtemplate = "default-256"
+rewrite = false
+start = "\"name\": \"Base16\","
+end = "}"
+
+# [[items]]
+# file = "~/.config/nvim-nvchad2/lua/themes/flavours.lua"
+# # file = "~/.config/nvim-nvchad2/lua/themes/{{scheme-slug}}.lua"
+# template = "nvchad"
+# subtemplate = "flavours"
+# light = false
+# rewrite = true
+
+[[items]]
+file = "~/.config/starship.toml"
+template = "starship"
+rewrite = false
+
+[[items]]
+file = "~/.config/nvim-custom/colors/default.lua"
+template = "nvim"
+rewrite = true
