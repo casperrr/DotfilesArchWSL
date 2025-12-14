@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export DISPLAY:172\x2e21\x2e16\x2e1\x3a0
-SETUVAR --export EDITOR:nvchad2\x2esh
+SETUVAR --export EDITOR:editor\x2esh
 SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:87005f
 SETUVAR fish_color_cancel:\x2d\x2dreverse
